@@ -17,16 +17,34 @@ class Person
     public $name;
 
     /* private $name; */
-    public function personName()
+    
+//     public function __construct()
+//     {
+//         echo "Constructor Created.<br/>";
+//     }
+
+    public function __construct($name)
     {
-        echo "Person name is: " . $this->name;
+        $this->name = $name;
+    }
+
+//     public function personName()
+//     {
+//         echo "Person name is: " . $this->name;
+//     }
+
+    public function personDetails()
+    {
+        echo "Person name is: {$this->name}";
     }
 }
 
-$personOne = new Person();
-/* echo $personOne->name; */
-$personOne->name = "Le Van Thuan";
-$personOne->personName();
+   /*  $personOne = new Person(); */
+        $personOne = new Person("Le Van Thuan");
+    /* echo $personOne->name; */
+    /* $personOne->name = "Le Van Thuan"; */
+    /* $personOne->personName(); */
+    $personOne->personDetails();
 
 ?>
 
