@@ -77,6 +77,8 @@
         class UserData {
             public $user;
             public $userId;
+            /*Hang so*/
+            const NAME="Le Van Thuan";
             
             public function __construct($user,$userId) {
                 $this->$user = $user;
@@ -89,12 +91,18 @@
                 unset($this->user);
                 unset($this->userId);
             }
+            
+            public function display(){
+                echo "Full name is: ".UserData::NAME;
+            }
         }
 
         $user = "Thuan";
         $userId ="42";
 
         $url = new UserData($user, $userId);
+        echo "<br/>";
+        $url->display();
 
 
 
