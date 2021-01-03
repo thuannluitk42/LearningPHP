@@ -78,23 +78,40 @@
             public $user;
             public $userId;
             /*Hang so*/
-            const NAME="Le Van Thuan";
+//             const NAME="Le Van Thuan";
+//             public static $age = "23";
             
             public function __construct($user,$userId) {
-                $this->$user = $user;
-                $this->$userId = $userId;
+                $this->user = $user;
+                $this->userId = $userId;
                 
-                echo "User name is {$this->$user} and User ID is {$this->$userId}";
+//                 echo "User name is {$this->$user} and User ID is {$this->$userId}";
             }
             
-            public function __destruct(){
-                unset($this->user);
-                unset($this->userId);
-            }
+//             public function __destruct(){
+// //                 unset($this->user);
+// //                 unset($this->userId);
+//                 echo "User name is {$this->$user} and User ID is {$this->$userId}";
+//             }
             
             public function display(){
-                echo "Full name is: ".UserData::NAME;
+//                 echo "Full name is: ".UserData::NAME;
+                echo "User name is {$this->user} and User ID is {$this->userId}";
             }
+
+            
+//             public static function display(){
+//                 echo "Full name is: ".UserData::NAME."<br/>";
+//                 echo "Age is: ".self::$age;
+//             }
+        }
+        class Admin extends UserData{
+            public $level;
+            public function display(){
+
+                echo "User name is {$this->user} and User ID is {$this->userId} and User Level is {$this->level}";
+            }
+            
         }
 
         $user = "Thuan";
@@ -103,7 +120,14 @@
         $url = new UserData($user, $userId);
         echo "<br/>";
         $url->display();
-
+//         UserData::display();
+        echo "<br/>";
+        
+        $user = "ThuanK";
+        $userId ="98";
+        $ad = new Admin($user, $userId);
+        $ad->level = "Imposter";
+        $ad->display();
 
 
 ?>
