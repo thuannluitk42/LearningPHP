@@ -73,10 +73,18 @@
          * */
 //         unset($personOne);
 
+        
+        // public
+        // private
+        // protected
+
 
         class UserData {
             public $user;
             public $userId;
+//             public $age = "23";
+//             private  $age = "23";
+            protected  $age = "23";
             /*Hang so*/
 //             const NAME="Le Van Thuan";
 //             public static $age = "23";
@@ -97,6 +105,7 @@
             public function display(){
 //                 echo "Full name is: ".UserData::NAME;
                 echo "User name is {$this->user} and User ID is {$this->userId}";
+                echo $this->age."Inside class";
             }
 
             
@@ -110,6 +119,7 @@
             public function display(){
 
                 echo "User name is {$this->user} and User ID is {$this->userId} and User Level is {$this->level}";
+                echo $this->age."In the Sub class";
             }
             
         }
