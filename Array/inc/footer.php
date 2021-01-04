@@ -3,9 +3,9 @@
   <footer class="footeroption">
  
 	  <section class="footerone">
-		  <p>Like us: facebook.com/KaziAriyanbd</p>
-		   <p>eMail: support@easylearningbd.com</p>
-		  <p>Web: www.easylearningbd.com</p>
+		<p>Like us: facebook.com/thuandevk42</p>
+		<p>email: thuandevk42@gmail.com</p>
+		<p>Web: www.thuandevk42.com</p>
 	  </section>
   </footer>
 
