@@ -20,12 +20,25 @@
 
 /* Mang key - value */
 
-$age = array("Thuan"=>"23","Hoang"=>"24","Quynh"=>"24");
+// $age = array("Thuan"=>"23","Hoang"=>"24","Quynh"=>"24");
 
-foreach ($age as $key=>$value){
-    echo "Name = ".$key.", Age: = ".$value;
-    echo "<br/>";
-}
+// foreach ($age as $key=>$value){
+//     echo "Name = ".$key.", Age: = ".$value;
+//     echo "<br/>";
+// }
+
+/* Mang 2 chieu: chua nhieu mang 1 chieu ben trong */
+
+$car = array(
+    
+    array("Ludo","10","20"),
+    array("Kanziro","30","40"),
+    array("Shoju","50","60")
+);
+
+echo $car[0][0]."<br/>";
+echo $car[1][0];
+
 
 ?>
 
