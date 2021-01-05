@@ -76,11 +76,33 @@ Hàm này sẽ trả về mảng đã chuyển đổi nếu trộn thành công 
 /* Hàm array_count_values() trong php dùng để đếm số lần trùng lặp giá trị của các phần tử trong mảng. 
 Kết quả của nó sẽ trả về một mảng với key chính là giá trị của các phần tử và value chính là 
 số lần trùng lặp (xuất hiện). */
-$name=array("Thuan","Hoang","Quynh","Hoang","Quynh","Hoang","Quynh","Hoang","Quynh","Thuan","Hoang","Quynh","Hoang","Quynh","Thuan");
+// $name=array("Thuan","Hoang","Quynh","Hoang","Quynh","Hoang","Quynh","Hoang","Quynh","Thuan","Hoang","Quynh","Hoang","Quynh","Thuan");
 
-print("<pre>");
-print_r(array_count_values($name));
-print("</pre>");
+// print("<pre>");
+// print_r(array_count_values($name));
+// print("</pre>");
+
+/* Hàm array_dift() sẽ so sánh sự khác nhau giữa hai hay nhiều mảng, 
+hàm trả về những phần tử tồn tại trong mảng đầu tiên mà không tồn tại trong các mảng tiếp theo. */
+
+$array1 = array(
+    "php",
+    "js",
+    "css",
+    "python"
+);
+$array2 = array(
+    "php",
+    "js",
+    "javascript",
+    "html"
+);
+$result = array_diff($array1, $array2);
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+
 ?>
 
 
