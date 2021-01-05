@@ -40,19 +40,38 @@
 // echo $car[1][0];
 
 /* Chu in hoa */
-echo "Mang in hoa";
-$age = array("thuan"=>"23","hoang"=>"24","quynh"=>"24");
-print ("<pre>");
-print_r(array_change_key_case($age,CASE_UPPER));
-print ("</pre>");
+// echo "Mang in hoa";
+// $age = array("thuan"=>"23","hoang"=>"24","quynh"=>"24");
+// print ("<pre>");
+// print_r(array_change_key_case($age,CASE_UPPER));
+// print ("</pre>");
 
 /* Chu in thuong */
-echo "Mang in thuong";
-$age2 = array("THUAN"=>"23","HOANG"=>"24","QUYNH"=>"24");
-print ("<pre>");
-print_r(array_change_key_case($age2,CASE_LOWER));
-print ("</pre>");
+// echo "Mang in thuong";
+// $age2 = array("THUAN"=>"23","HOANG"=>"24","QUYNH"=>"24");
+// print ("<pre>");
+// print_r(array_change_key_case($age2,CASE_LOWER));
+// print ("</pre>");
 
+/* Cú pháp: bool array_combine ( array $keys , array $values )
+
+Trong đó:
+
+$keys là mảng sẽ được chuyển đổi thành key
+$values là mảng sẽ được chuyển đổi thành values
+Lưu ý: Hai mảng truyền vào phải có tổng số phần tử bằng nhau thì hàm này mới chuyển đổi được.
+
+# Return Valules
+Hàm này sẽ trả về mảng đã chuyển đổi nếu trộn thành công và FALSE nếu trộn thất bại */
+
+$name=array("Thuan","Hoang","Quynh");
+$age=array(23,24,24);
+
+$combine = array_combine($name, $age);
+
+print("<pre>");
+print_r($combine);
+print("</pre>");
 ?>
 
 
