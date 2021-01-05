@@ -64,13 +64,22 @@ Lưu ý: Hai mảng truyền vào phải có tổng số phần tử bằng nhau
 # Return Valules
 Hàm này sẽ trả về mảng đã chuyển đổi nếu trộn thành công và FALSE nếu trộn thất bại */
 
-$name=array("Thuan","Hoang","Quynh");
-$age=array(23,24,24);
+// $name=array("Thuan","Hoang","Quynh");
+// $age=array(23,24,24);
 
-$combine = array_combine($name, $age);
+// $combine = array_combine($name, $age);
+
+// print("<pre>");
+// print_r($combine);
+// print("</pre>");
+
+/* Hàm array_count_values() trong php dùng để đếm số lần trùng lặp giá trị của các phần tử trong mảng. 
+Kết quả của nó sẽ trả về một mảng với key chính là giá trị của các phần tử và value chính là 
+số lần trùng lặp (xuất hiện). */
+$name=array("Thuan","Hoang","Quynh","Hoang","Quynh","Hoang","Quynh","Hoang","Quynh","Thuan","Hoang","Quynh","Hoang","Quynh","Thuan");
 
 print("<pre>");
-print_r($combine);
+print_r(array_count_values($name));
 print("</pre>");
 ?>
 
