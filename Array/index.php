@@ -85,23 +85,43 @@ số lần trùng lặp (xuất hiện). */
 /* Hàm array_dift() sẽ so sánh sự khác nhau giữa hai hay nhiều mảng, 
 hàm trả về những phần tử tồn tại trong mảng đầu tiên mà không tồn tại trong các mảng tiếp theo. */
 
-$array1 = array(
-    "php",
-    "js",
-    "css",
-    "python"
-);
-$array2 = array(
-    "php",
-    "js",
-    "javascript",
-    "html"
-);
-$result = array_diff($array1, $array2);
-echo "<pre>";
-print_r($result);
-echo "</pre>";
+// $array1 = array(
+//     "php",
+//     "js",
+//     "css",
+//     "python"
+// );
+// $array2 = array(
+//     "php",
+//     "js",
+//     "javascript",
+//     "html"
+// );
+// $result = array_diff($array1, $array2);
+// echo "<pre>";
+// print_r($result);
+// echo "</pre>";
 
+/* Hàm array_diff_assoc() trong php có tác dụng lấy ra các phần tử ở mảng thứ nhất 
+ * không nằm ở tất cả các mảng còn lại. 
+Ví dụ giá trị 'freetuts.net' chỉ có ở mảng B mà không có ở mảng A thì nó được lấy. */
+
+// $array1 = array(
+//     'name'      => 'Cường',
+//     'website'   => 'freetuts.net',
+//     'phone'     => '0979 306 603'
+// );
+
+// $array2 = array(
+//     'name'      => 'Cường',
+//     'website'   => 'https://freetuts.net',
+//     'phone'     => '0979 306 603'
+// );
+
+
+// echo "<pre>";
+// print_r(array_diff_assoc($array1, $array2));
+// echo "</pre>";
 
 ?>
 
