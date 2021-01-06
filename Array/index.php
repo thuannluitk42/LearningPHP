@@ -180,14 +180,23 @@ Lưu ý: array_key_exists() chỉ tìm key trong mảng một chiều, các key 
 // }
 
 /* Hàm array_keys() sẽ trả về một hoặc một tập hợp các khóa của mảng. */
-$car = array("volvo"=>"xc80","bmw"=>"x447","toyota"=>"honda");
+// $car = array("volvo"=>"xc80","bmw"=>"x447","toyota"=>"honda");
+
+// echo "<pre>";
+// print_r(array_keys($car));
+// // print_r(array_keys($car,"honda"));
+// echo "</pre>";
+
+/* Hàm array_merge() sử dụng để nối hai hay nhiều mảng lại thành một mảng. 
+Nếu trong các mảng truyền vào có những phần tử có cùng khóa, 
+phần tử của mảng cuối cùng được truyền vào sẽ được chọn để nối vào mảng kết quả. */
+
+$arr_one=array("a"=>"red","b"=>"green");
+$arr_two=array("c"=>"blue","b"=>"yellow");
 
 echo "<pre>";
-print_r(array_keys($car));
-// print_r(array_keys($car,"honda"));
+print_r(array_merge($arr_one,$arr_two));
 echo "</pre>";
-
-
 ?>
 
 
