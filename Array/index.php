@@ -160,13 +160,26 @@ Kết quả trả về sẽ là một mảng chưa phần tử có KEY và VALUE
 Trong đó mảng đầu tiên sẽ được so sánh với các mảng còn lại. 
 Kết quả trả về sẽ là một mảng chứa những phần tử ở mảng đầu tiên mà có KEY tồn tại ở các bảng còn lại. */
 
-$array_one = array("a"=>"black","b"=>"green","c"=>"blue","d"=>"yellow");
-$array_two = array("a"=>"red","h"=>"green","c"=>"blue");
-$array_three = array("a"=>"black","h"=>"pink","c"=>"blue");
+// $array_one = array("a"=>"black","b"=>"green","c"=>"blue","d"=>"yellow");
+// $array_two = array("a"=>"red","h"=>"green","c"=>"blue");
+// $array_three = array("a"=>"black","h"=>"pink","c"=>"blue");
 
-echo "<pre>";
-print_r(array_intersect_key($array_one,$array_two,$array_three));
-echo "</pre>";
+// echo "<pre>";
+// print_r(array_intersect_key($array_one,$array_two,$array_three));
+// echo "</pre>";
+
+/* Hàm array_key_exists() dùng để kiểm tra xem một key nào đó có nằm trong mảng hay không.
+Hàm trả về TRUE nếu key có trong mảng, trả về FALSE nếu ngược lại.
+Lưu ý: array_key_exists() chỉ tìm key trong mảng một chiều, các key lồng trong mảng nhiều chiều sẽ không được tìm. */
+$arr=array("name","age");
+
+if(array_key_exists("name", $arr)){ //if(array_key_exists(0, $arr)){
+    echo "Key Already Exists";
+}else{
+    echo "Key Does Not Exists";
+}
+
+
 ?>
 
 
