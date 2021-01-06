@@ -137,12 +137,12 @@ kết quả trả về sẽ là danh sách các phần tử nhưng bỏ đi 3 ph
 /* Hàm array_intersect() trong PHP trả về giao điểm của hai mảng. 
 Nói cách khác, nó trả về các phần tử giống nhau của hai mảng */
 
-$name1=array("Java","PHP","C++","VBA");
-$name2=array("PHP","HTML","CSS","Java");
+// $name1=array("Java","PHP","C++","VBA");
+// $name2=array("PHP","HTML","CSS","Java");
 
-echo "<pre>";
-print_r(array_intersect($name1,$name2));
-echo "</pre>";
+// echo "<pre>";
+// print_r(array_intersect($name1,$name2));
+// echo "</pre>";
 ?>
 
 
