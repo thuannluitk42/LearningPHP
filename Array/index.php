@@ -171,13 +171,21 @@ Kết quả trả về sẽ là một mảng chứa những phần tử ở mả
 /* Hàm array_key_exists() dùng để kiểm tra xem một key nào đó có nằm trong mảng hay không.
 Hàm trả về TRUE nếu key có trong mảng, trả về FALSE nếu ngược lại.
 Lưu ý: array_key_exists() chỉ tìm key trong mảng một chiều, các key lồng trong mảng nhiều chiều sẽ không được tìm. */
-$arr=array("name","age");
+// $arr=array("name","age");
 
-if(array_key_exists("name", $arr)){ //if(array_key_exists(0, $arr)){
-    echo "Key Already Exists";
-}else{
-    echo "Key Does Not Exists";
-}
+// if(array_key_exists("name", $arr)){ //if(array_key_exists(0, $arr)){
+//     echo "Key Already Exists";
+// }else{
+//     echo "Key Does Not Exists";
+// }
+
+/* Hàm array_keys() sẽ trả về một hoặc một tập hợp các khóa của mảng. */
+$car = array("volvo"=>"xc80","bmw"=>"x447","toyota"=>"honda");
+
+echo "<pre>";
+print_r(array_keys($car));
+// print_r(array_keys($car,"honda"));
+echo "</pre>";
 
 
 ?>
