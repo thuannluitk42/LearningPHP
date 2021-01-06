@@ -123,6 +123,17 @@ Ví dụ giá trị 'freetuts.net' chỉ có ở mảng B mà không có ở m�
 // print_r(array_diff_assoc($array1, $array2));
 // echo "</pre>";
 
+/* Hàm array_diff_key() trong php có tác dụng lấy các phần tử không giống nhau ở hai mảng. 
+Ví dụ mảng A có 10 phần tử và mảng B có 5 phần tử, trong đó có  3 phần tử giống nhau thì 
+kết quả trả về sẽ là danh sách các phần tử nhưng bỏ đi 3 phần tử giống nhau đó. */
+
+$mang1 = array('freetuts', 'freetuts.net', 'thehalfheart');
+$mang2 = array('freetuts.net', 'thehalfheart');
+
+echo "<pre>";
+print_r(array_diff_key($mang1, $mang2));
+echo "</pre>";
+
 ?>
 
 
