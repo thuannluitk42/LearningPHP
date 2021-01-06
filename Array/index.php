@@ -148,11 +148,24 @@ Nói cách khác, nó trả về các phần tử giống nhau của hai mảng 
 Trong đó mảng đầu tiên sẽ được so sánh với các mảng còn lại. 
 Kết quả trả về sẽ là một mảng chưa phần tử có KEY và VALUE tồn tại ở tất cả các mảng tồn tại. */
 
-$name1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
-$name2=array("t"=>"red","h"=>"green","c"=>"blue");
+// $name1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+// $name2=array("t"=>"red","h"=>"green","c"=>"blue");
+
+// echo "<pre>";
+// print_r(array_intersect_assoc($name1,$name2));
+// echo "</pre>";
+
+
+/* Hàm array_intersect_key có giá trị truyền vào là n mảng, 
+Trong đó mảng đầu tiên sẽ được so sánh với các mảng còn lại. 
+Kết quả trả về sẽ là một mảng chứa những phần tử ở mảng đầu tiên mà có KEY tồn tại ở các bảng còn lại. */
+
+$array_one = array("a"=>"black","b"=>"green","c"=>"blue","d"=>"yellow");
+$array_two = array("a"=>"red","h"=>"green","c"=>"blue");
+$array_three = array("a"=>"black","h"=>"pink","c"=>"blue");
 
 echo "<pre>";
-print_r(array_intersect_assoc($name1,$name2));
+print_r(array_intersect_key($array_one,$array_two,$array_three));
 echo "</pre>";
 ?>
 
