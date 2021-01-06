@@ -127,13 +127,22 @@ Ví dụ giá trị 'freetuts.net' chỉ có ở mảng B mà không có ở m�
 Ví dụ mảng A có 10 phần tử và mảng B có 5 phần tử, trong đó có  3 phần tử giống nhau thì 
 kết quả trả về sẽ là danh sách các phần tử nhưng bỏ đi 3 phần tử giống nhau đó. */
 
-$mang1 = array('freetuts', 'freetuts.net', 'thehalfheart');
-$mang2 = array('freetuts.net', 'thehalfheart');
+// $mang1 = array('freetuts', 'freetuts.net', 'thehalfheart');
+// $mang2 = array('freetuts.net', 'thehalfheart');
+
+// echo "<pre>";
+// print_r(array_diff_key($mang1, $mang2));
+// echo "</pre>";
+
+/* Hàm array_intersect() trong PHP trả về giao điểm của hai mảng. 
+Nói cách khác, nó trả về các phần tử giống nhau của hai mảng */
+
+$name1=array("Java","PHP","C++","VBA");
+$name2=array("PHP","HTML","CSS","Java");
 
 echo "<pre>";
-print_r(array_diff_key($mang1, $mang2));
+print_r(array_intersect($name1,$name2));
 echo "</pre>";
-
 ?>
 
 
