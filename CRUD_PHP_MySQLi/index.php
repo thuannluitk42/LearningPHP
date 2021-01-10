@@ -20,6 +20,7 @@ if(isset($_GET['msg'])){
  
 <table class="tmain">
 <tr>
+<th>STT</th>
 <th>Name</th>
 <th>Email</th>
 <th>Skill</th>
@@ -27,9 +28,12 @@ if(isset($_GET['msg'])){
 </tr>
 
 <?php  if ($read) { ?>
-<?php while($row = $read->fetch_assoc()) {?>    
+<?php 
+$sl=0;
+while($row = $read->fetch_assoc()) {?>    
 
 <tr>
+<th><?php echo $sl++;?></th>
 <th><?php echo $row['name'];?></th>
 <th><?php echo $row['email'];?></th>
 <th><?php echo $row['skill'];?></th>

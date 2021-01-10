@@ -35,6 +35,15 @@ if(isset($error)){
 
 ?>
 
+<?php 
+
+if(isset($_POST['delete'])){
+    $query = "delete from php_user where id = '$id'";
+    $delete = $db->delete($query);
+}
+
+?>
+
 <form action="update.php?id=<?php echo $id?>" method="post">
 
 <table class="tmain">
@@ -56,8 +65,10 @@ if(isset($error)){
 
 	<tr>
 		<td>Action</td>
-		<td><input type="submit" name="submit" value="submit"> <input
-			type="reset" value="cancel"></td>
+		<td><input type="submit" name="submit" value="update"> 
+			<input type="reset" value="cancel">
+			<input type="submit" name="delete" value="delete">
+			</td>
 	</tr>
 
 </table>
