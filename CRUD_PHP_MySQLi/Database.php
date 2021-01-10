@@ -41,5 +41,27 @@ class Database
             return false;
         }
     }
+    
+    // insert data 
+    public function insert($query) {
+        $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        if($insert_row){
+            header("Location: index.php?msg=".urlencode('Data insert successfully'));
+            exit();
+        }else {
+            die("Error: (".$this->link->error.")".$this->link->error);
+        }
+    }
+    
+    // update data
+    public function update($query) {
+        $update_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        if($update_row){
+            header("Location: index.php?msg=".urlencode('Data update successfully'));
+            exit();
+        }else {
+            die("Error: (".$this->link->error.")".$this->link->error);
+        }
+    }
 }
 ?>

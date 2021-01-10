@@ -9,6 +9,14 @@ $db = new Database();
 $query = "select * from php_user";
 $read = $db->select($query);
 ?> 
+
+<?php 
+
+if(isset($_GET['msg'])){
+    echo "<span style='color:green'>".$_GET['msg']."</span>";
+}
+
+?>
  
 <table class="tmain">
 <tr>
@@ -25,7 +33,7 @@ $read = $db->select($query);
 <th><?php echo $row['name'];?></th>
 <th><?php echo $row['email'];?></th>
 <th><?php echo $row['skill'];?></th>
-<th><a href="update.php?id=<?php echo $row['id'];?>">Edit</a></th>
+<th><a href="update.php?id=<?php echo urlencode($row['id']) ;?>">Edit</a></th>
 </tr>
 
 <?php }?>
@@ -34,6 +42,8 @@ $read = $db->select($query);
 <p>There are no data</p>
 <?php }?>
 </table>
+
+<a href="create.php">Create</a>
 
 
 <?php include "inc/footer.php"; ?>
